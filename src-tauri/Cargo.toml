@@ -1,0 +1,26 @@
+[package]
+name = "system-monitor"
+version = "0.1.0"
+description = "A system monitor built with Tauri + SolidJS"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "1", features = [] }
+
+[dependencies]
+serde_json = "1"
+serde = { version = "1", features = ["derive"] }
+tauri = { version = "1", features = ["window-hide", "shell-open", "macos-private-api", "system-tray"] }
+lazy_static = "1.4.0"
+sysinfo = "0.30.7"
+battery = "0.7.8"
+window-vibrancy = "0.4.3"
+window-shadows = "0.2.1"
+
+[features]
+default = ["custom-protocol"]
+# This feature is used for production builds or when a dev server is not specified, DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]

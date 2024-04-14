@@ -1,0 +1,16 @@
+.card-default {
+    @apply h-full w-full rounded-lg;
+}
+
+.card {
+    @apply card-default;
+    @apply border border-gray-300;
+}
+
+.card > .card-header {
+    @apply border-b text-smaller flex justify-between items-center font-medium py-[6px] px-2;
+}
+
+.card > .card-body {
+    @apply p-2;
+}

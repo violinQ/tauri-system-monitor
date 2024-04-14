@@ -1,0 +1,23 @@
+.battery-info {
+    @apply table box-border border-collapse w-full;
+    text-indent: initial;
+    border-spacing: 2px;
+}
+
+.battery-info tbody {
+    @apply table-row-group align-middle border-inherit;
+}
+
+.battery-info tbody > tr {
+    @apply table-row border-inherit;
+    vertical-align: inherit;
+    font-size: 12px;
+}
+
+.battery-info tbody > tr > td {
+    @apply border border-gray-300 text-center;
+}
+
+.battery-info tbody > tr > .label {
+    @apply bg-gray-100;
+}
